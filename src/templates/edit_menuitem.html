@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+<h2> Edit menu item </h2>
+
+<form class="form-big" method="POST" action="{{ url_for('edit_menu_item', restaurant_id=i.restaurant_id, menu_id=i.id) }}">
+    <p>Name: <input type="text" size="30" name="name" placeholder="{{i.name}}" required></p>
+    <p>Description:
+        <textarea rows="3" column="50" maxlength="250" name="description" placeholder="{{i.description}}" required></textarea>
+    </p>
+    <p>Price: <span>$<input type="number" size="8" step="0.01" min="0" name="price" placeholder="{{i.price}}" required></span></p>
+    <p>Course:</p>
+        <input type ='radio' name='course' value ='Appetizer' required>Appetizer</br>
+		<input type ='radio' name='course' value ='Entree'>Entree</br>
+		<input type ='radio' name='course' value ='Dessert'>Dessert</br>
+		<input type ='radio' name='course' value ='Beverage'>Beverage</br></br>
+    <input type="submit" value="Edit">
+    <a href="{{url_for('restaurant_menu', restaurant_id=i.restaurant_id)}}">Cancel</a>
+</form>
+
+{% endblock %}

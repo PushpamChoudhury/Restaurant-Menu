@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<p align="center">There is no existing menu item for restaurant {{restaurant.name}}</p>
+<a href="{{ url_for('create_menu_item', restaurant_id=restaurant.id) }}" class="restaurants">Create a menu item</a>
+<a href="{{ url_for('get_all_restaurants') }}" class="restaurants">Cancel</a>
+
+{% endblock %}

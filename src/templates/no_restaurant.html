@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<p align="center">There is no existing restaurant in the database</p>
+<a href="{{ url_for('add_new_restaurant') }}" class="restaurants">Add a new restaurant</a>
+<a href="{{ url_for('restaurant_menu', restaurant_id=restaurant.id) }}" class="restaurants">Cancel</a>
+
+{% endblock %}

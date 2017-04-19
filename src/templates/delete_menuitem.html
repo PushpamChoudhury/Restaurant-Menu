@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block body %}
+
+    <h2> Delete menu item {{i.name}} ?</h2></br></br></br>
+
+    <form class="form-small" method="POST" action="{{ url_for('delete_menu_item', restaurant_id=i.restaurant_id, menu_id=i.id) }}">
+        <input type="submit" value="Delete">
+        <a href="{{url_for('restaurant_menu', restaurant_id=i.restaurant_id)}}">Cancel</a>
+    </form>
+
+{% endblock %}
