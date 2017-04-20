@@ -1,7 +1,7 @@
 # Restaurant-Menu
 Restaurant-Menu provides a web application for managing restaurants i.e., user can perform [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) operations to manage a list of restaurants. Alongwith restaurants, multiple menu items for each restaurants can also be managed.
 
-It is based of [Flask](http://flask.pocoo.org/) framework. This application has user session management capability which is achieved using [Flask-Login](https://flask-login.readthedocs.io/en/latest/) package. Also, SQLite3 is used as database for this application.
+It is based of [Flask](http://flask.pocoo.org/) framework. This application has user session management capability which is achieved using [Flask-Login](https://flask-login.readthedocs.io/en/latest/) package. In this application, SQLite3 is used as the database engine and in order to interact with the database in a object oriented way, SQLAlchemy is used as the Object Relational Mapper ([ORM](https://en.wikipedia.org/wiki/Object-relational_mapping)).
 
 ## Installation
 For setup, install following extensions with pip:
@@ -10,6 +10,8 @@ $ pip install Flask
 $ pip install flask-login
 ```
 To install SQLite3 database, down precompiled binaries from [here](https://www.sqlite.org/download.html).
+
+To download SQLAlchemy, click [here](https://www.sqlalchemy.org/download.html).
 
 ## Getting Started
 Once installed, clone or download the project into your computer. Go into the ```src/``` directory and run the python files in it:
